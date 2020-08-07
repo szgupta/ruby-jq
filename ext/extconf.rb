@@ -31,6 +31,7 @@ unless using_system_libraries?
 end
 
 system('echo $PATH')
+system('echo $LD_LIBRARY_PATH')
 abort 'libjq not found' unless have_library('jq')
 
 create_makefile('jq_core')
