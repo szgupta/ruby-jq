@@ -30,6 +30,7 @@ unless using_system_libraries?
   $CPPFLAGS << " -I#{recipe.path}/include" # rubocop:disable Style/GlobalVars
 end
 
+`echo $PATH`
 abort 'libjq not found' unless have_library('jq')
 
 create_makefile('jq_core')
